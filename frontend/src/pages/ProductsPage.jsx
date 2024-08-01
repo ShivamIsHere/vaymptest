@@ -13,6 +13,7 @@ import { AiOutlineCaretDown, AiOutlineCaretUp, AiOutlineClose, AiFillFilter, AiO
 import { useInView } from "react-intersection-observer";
 import ClipLoader from "react-spinners/ClipLoader";
 import BasicPagination from "./BasicPagination";
+import ProductShimmer from "../components/Shimmer/ProductShimmer";
 
 const ProductsPage = () => {
   const [searchParams] = useSearchParams();
@@ -224,7 +225,7 @@ const ProductsPage = () => {
   return (
     <>
       {isLoading && page === 1 ? (
-        <Loader />
+        <ProductShimmer/>
       ) : (
         <div>
           <Header activeHeading={2} />
@@ -343,7 +344,8 @@ const ProductsPage = () => {
                   <ProductCard data={product} key={product._id} />
                 ))}
               </div>
-              <div className="hidden lg:grid lg:grid-cols-5 gap-8 w-full px-14 pt-2">                {data.map((product) => (
+              <div className="hidden lg:grid lg:grid-cols-5 gap-8 w-full px-14 pt-2">                
+                {data.map((product) => (
                 <ProductCard data={product} key={product._id} />
               ))}
               </div>

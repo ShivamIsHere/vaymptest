@@ -50,7 +50,7 @@ const ShopProfileData = ({ isOwner }) => {
       <div className="flex w-full items-center justify-between">
         {/* Navigation buttons code */}
         <div className="w-full flex justify-between">
-          <div className="flex items-center" onClick={() => setActive(1)}>
+          <div className="flex items-center px-8 lg:mx-48" onClick={() => setActive(1)}>
             <h5
               className={`font-[600] text-[20px] ${
                 active === 1 ? "text-red-500" : "text-[#333]"
@@ -59,7 +59,7 @@ const ShopProfileData = ({ isOwner }) => {
               Products
             </h5>
           </div>
-          <div className="flex items-center" onClick={() => setActive(2)}>
+          <div className="flex items-center px-8 lg:mx-48" onClick={() => setActive(2)}>
             <h5
               className={`font-[600] text-[20px] ${
                 active === 2 ? "text-red-500" : "text-[#333]"
@@ -69,7 +69,7 @@ const ShopProfileData = ({ isOwner }) => {
             </h5>
           </div>
 
-          <div className="flex items-center" onClick={() => setActive(3)}>
+          {/* <div className="flex items-center" onClick={() => setActive(3)}>
             <h5
               className={`font-[600] text-[20px] ${
                 active === 3 ? "text-red-500" : "text-[#333]"
@@ -77,7 +77,7 @@ const ShopProfileData = ({ isOwner }) => {
             >
               Reviews
             </h5>
-          </div>
+          </div> */}
         </div>
         <div>
           {/* {isOwner && (
@@ -129,7 +129,7 @@ const ShopProfileData = ({ isOwner }) => {
         </div>
       )}
 
-      {active === 3 && (
+      {/* {active === 3 && (
         <div className="w-full">
           {allReviews &&
             allReviews.map((item, index) => (
@@ -155,7 +155,7 @@ const ShopProfileData = ({ isOwner }) => {
             </h5>
           )}
         </div>
-      )}
+      )} */}
     </div>
   );
 };
